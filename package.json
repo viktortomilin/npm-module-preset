@@ -1,0 +1,48 @@
+{
+  "name": "npm-module-preset",
+  "version": "0.0.1",
+  "description": "Settings to develop the npm module from scratch",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest src/",
+    "test:watch": "jest --watch src/",
+    "lint": "standard --fix src/**/*.js",
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktortomilin/npm-module-preset.git"
+  },
+  "keywords": [
+    "module",
+    "preset",
+    "flow",
+    "jest"
+  ],
+  "author": "Viktor Tomilin <viktortomilin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viktortomilin/npm-module-preset/issues"
+  },
+  "homepage": "https://github.com/viktortomilin/npm-module-preset#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-flow": "^6.23.0",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "flow-bin": "^0.71.0",
+    "jest": "^22.4.3",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ],
+    "env": [
+      "jest"
+    ]
+  }
+}
